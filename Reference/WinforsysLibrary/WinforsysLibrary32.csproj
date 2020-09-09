@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DA453E7C-B8AF-4425-9A32-8E82AFCFE068}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Winforsys</RootNamespace>
+    <AssemblyName>Winforsys</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\_Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>..\..\_Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\_Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\..\_Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio 11.0\Visual Studio Tools for Office\PIA\Office14\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=2.112.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Reference\Oracle.DataAccess.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DBManagers\StaticEnum.cs" />
+    <Compile Include="JKControl\CloseTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="JKControl\ControlBarUi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="JKControl\ControlBarUi.Designer.cs">
+      <DependentUpon>ControlBarUi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JKControl\GradientButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="JKControl\GradientPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="JKControl\ImageButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="JKControl\JKProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="JKEventHandler.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Util\ConsolLogger.cs" />
+    <Compile Include="Util\FTPManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Util\LogManager.cs" />
+    <Compile Include="DBManagers\SqlDBManager.cs" />
+    <Compile Include="DBManagers\DataSetHelper.cs" />
+    <Compile Include="JKControl\CheckComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="JKControl\GlassMap.cs" />
+    <Compile Include="JKControl\GlassMap.Designer.cs">
+      <DependentUpon>GlassMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JKControl\GlassMap.Data.cs">
+      <DependentUpon>GlassMap.cs</DependentUpon>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="JKControl\JKMessageBox.cs" />
+    <Compile Include="JKControl\UserMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JKControl\UserMessageBox.Designer.cs">
+      <DependentUpon>UserMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopupControl\GripBounds.cs" />
+    <Compile Include="PopupControl\NativeMethods.cs" />
+    <Compile Include="PopupControl\Popup.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PopupControl\Popup.designer.cs">
+      <DependentUpon>Popup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopupControl\PopupAnimations.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\JKMouseWheel.cs" />
+    <Compile Include="Util\Win32API.cs" />
+    <Compile Include="Version.cs" />
+    <EmbeddedResource Include="JKControl\ControlBarUi.resx">
+      <DependentUpon>ControlBarUi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JKControl\GlassMap.resx">
+      <DependentUpon>GlassMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JKControl\UserMessageBox.resx">
+      <DependentUpon>UserMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Util\FileManager.cs" />
+    <Compile Include="DBManagers\OracleDBManager.cs" />
+    <Compile Include="Util\REGUtil.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RedCross.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Image\BG_Bubble.png" />
+    <Content Include="Image\BG_Bubble02.png" />
+    <Content Include="Image\BG_Bubble02_S.png" />
+    <Content Include="Image\BG_Bubble_S.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
