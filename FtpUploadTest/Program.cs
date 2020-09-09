@@ -1,15 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using System.Windows.Forms;
-using System.Threading;
-using System.IO;
-
-using Winforsys.Util;
-
+﻿using FtpUploadTest.Class;
 
 namespace XML_Parser
 {
@@ -41,7 +30,7 @@ namespace XML_Parser
             bool result = false;
 
             string dataPath = "\\TEST\\";
-            string localPath = @"D:\TMS\TEST\test.xml";
+            string localPath = @"D:\BEOMBEOMJOJO\test.xml";
 
             //XMl File Uolad
             if (pro.Manager.UpLoad(dataPath, localPath) == false)
